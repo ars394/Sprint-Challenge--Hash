@@ -1,10 +1,14 @@
 def has_negatives(a):
+    d = {}
+    result1 = []
+    for i in a:
+        d[i] = True
+    
+    for k, v in d.items(): 
+        if k > 0 and 0 - k in d:
+            result1.append(k)
 
-    """
-    YOUR CODE HERE
-    """
-
-    return result
+    return result1
 
 
 if __name__ == "__main__":
